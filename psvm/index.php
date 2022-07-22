@@ -9,7 +9,7 @@
     <meta name = "Author" content= " Srijeet"/>
     <meta name = "keywords" content= "HTML CSS JAVASCRIPT"/>
     <title>Home</title>
-    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -54,28 +54,18 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <Nav id="header">
-        <div class="container flex-row navbar">
-            <div  id="navigation" class="nav-section flex-row">
-                <div class="nav active" ><a href="#">HOME</a></div>
-                <div class="nav"><a href="pages/services.php">SERVICES</a></div>
-                <div class="nav"><a href="pages/aboutus.php">ABOUT US</a></div>
-                <div class="nav"><a href="pages/contactus.php">CONTACT US</a></div>
-                <div class="nav"><a href="pages/signin.html">SIGN IN</a></div>
-            </div>
-        </div>
-    </Nav>
-    <!-- End of Navbar -->
+
+   <?php include 'header.php'?>
+ 
 
     <!-- Banner -->
     <div class="banner ">
         <div id="img"  class="banner-image">
-            <img src="images/banner.svg">
+            <img src="images/research2.svg">
         </div>
         <div class="banner-content flex-column">
             <div class="hero-text" style="text-transform: uppercase;">
-                 Public Service<br/> Management
+                 E-commerece<br/> Website
             </div>
             
             <div class="button" style="margin-top: 20px;;">
@@ -94,21 +84,21 @@
         </div>
         <div class="index-content container ">
             <div class="item flex-column " >
-                <img src="images/blog.svg" alt="blog">
-                 <a href="pages/services.html" class="text">Services</a>
+                <img src="images/easyreturn.png" alt="blog">
+                 <h5>Easy Return</h5>
             </div>
             <div class="item flex-column" >
-                <img src="images/cv.svg" alt="cv">
-                 <a  href="pages/aboutus.html" class="text">About Us</a>
+                <img src="images/f&f.png" alt="cv">
+                <h5>Free & Fast shipping</h5>
             </div>
             
             <div class="item flex-column"  >
-                <img src="images/research2.svg" alt="">
-                <a href="pages/contactus.html" class="text">Contact Us</a>
+                <img src="images/sg.png" alt="">
+                <h5>Satisfaction Gurantee</h5>
             </div>
             <div class="item flex-column"  >
-                <img src="images/contact.svg" alt="">
-                <a href="pages/signin.html" class="text">Sign in </a>
+                <img src="images/money.png" alt="">
+                <h5>Money back Gurantee</h5>
             </div>
         </div>
     </div>
@@ -116,67 +106,19 @@
 
     <!-- Footer -->
     <!-- Use of flex to style the footer-item -->
-    <Footer class="footer">
-        <div class="container">
-            <div class="row upper-footer ">
-                <div class="footer-item " style=" display:flex ; flex-direction:column;">
-                    <div class="footer-title">Contact Details</div>
-                    <div class="footer-text"><i class="fas fa-envelope"></i> Email</div>
-                    <div class="footer-text">sthapityashu@gmail.com</div>
-                    <div class="footer-text"><i class="fas fa-phone "></i> Phone</div>
-                    <div class="footer-text">+977 9808768922</div>
-                    <div class="footer-text">+97701 4226506</div>
-                </div>
-
-               
-                <div class="footer-item">
-                    <div class="sub-text">
-                        Follow us on:
-    
-                    </div>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    </div>
-                </div>
-    
-                <div class="footer-item"> 
-                    <div class="sub-text">Newsletter</div>
-                    
-                            <form class="newsletter" >
-                                <div class="input-group flex-row" >
-                                    <input  type="text" name="search" placeholder="Email address">
-                                    <button type="submit" class="btn btn-default">Subscribe</button>
-                                </div>
-                            </form >
-                   
-                    </div>
-                   
-                </div>
-            </div>
-            <div class="lower-footer">
-                <div class=" footer-details mini-container  flex-row"  >
-                    <div class="left-footer"> &copy; Copyright Yashu &trade;2020. All rights Reserved. </div>
-                   <div class="right-footer"> Developed by : Yashu Sthapit</div></div>
-            </div>
-            
-        </div>
-    </Footer>
+   <?php include'footer.php'; ?>
     <!-- End of footer -->
     <!-- INnernal Javascript -->
-    <script>
+    <!-- <script>
         // Creating array to store images
-        var images = ['images/blog.svg', 'images/about.svg', 'images/cv.svg', 'images/research.svg', 'images/research2.svg', 'images/banner.svg'];
+        var images = ['images/easyreturn.png', 'images/f&f.png', 'images/sg.png', 'images/money.png'];
             //    Declaration and initialization of varaible x
         var x = 0;
         //  To get the element rederenced with 'img' id. 
         var imgs = document.getElementById('img');
     
-        //  slider function is called every 3 seconds  
-        setInterval(slider, 3000);
+        //  slider function is called every 5 seconds  
+        setInterval(slider, 5000);
 
         //function named slider is declares.
          function slider() {
@@ -190,7 +132,7 @@
             // images[x-1] is used to manage the relation between array length and indexing og array
             imgs.innerHTML = "<img src=" + images[x - 1] + ">";
         }
-   </script>
+   </script> -->
    <!-- End of Internal Javascript -->
 
     <!-- External JavaScript -->
