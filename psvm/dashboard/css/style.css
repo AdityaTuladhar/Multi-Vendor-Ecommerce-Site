@@ -1,0 +1,501 @@
+/* *** Fonts *** */
+@font-face {
+	font-family: 'bold';
+	src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+	font-family: 'light';
+	src: url(../fonts/Poppins-Light.ttf);
+}
+@font-face {
+	font-family: 'medium';
+	src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+	font-family: 'regular';
+	src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+	font-family: 'semibold';
+	src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+	font-family: 'thin';
+	src: url(../fonts/Poppins-Thin.ttf);
+}
+/* End of fonts */
+
+/*  *** CSS *** */
+/* Most frequently used in almost all pages */
+html {
+	scroll-behavior: smooth;
+
+}
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica";
+	font-size: 16px;
+
+}
+/*.container{
+	min-height:100%;
+  }*/
+  a {
+   text-decoration: none;
+ }
+ .flex-row {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
+ .flex-column {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+
+ /* *** Buttons Styles*** */
+ .btn {
+   padding: 5px 10px;
+
+   font: 14px 'medium';
+   text-transform: uppercase;
+   cursor: pointer;
+   border-radius: 4px;
+   border: none;
+ }
+ .btn-default {
+   background-color: #009688;
+   color: #fff;
+ }
+ .btn-large {
+   padding: 15px 40px;
+ }
+
+ .btn-default:hover {
+   background-color: #046e64;
+ }
+ /* ***End of Buttons */
+
+ /* Navbar */
+ #header {
+   color: black;
+   text-align: center;
+   font-weight: bold;
+   position: fixed;
+   top: 0;
+   background-color: #009688;
+   width: 100%;
+   /*z-index: 99;*/
+   padding: 20px 0;
+ }
+ .nav img {
+   width: 75px;
+ }
+ .navbar {
+   margin: -13px 0;
+   margin-right: 100px;
+   justify-content: flex-end;
+ }
+ .nav {
+   padding: 0 15px;
+   margin: 0 20px;
+   /* border-radius: 9%; */
+ }
+ .nav a {
+   color: white;
+   border-radius: 9%;
+ }
+
+ /*Sidebar */
+ .title_bar
+ {
+   display: block;
+   /*margin: 10px 0; */
+   padding: 4px 0;
+   background-color: #343a40;
+ }
+ .title_bar a
+ {
+   font-family: "Helvetica";
+   font-size: 16px;
+   color: #ebecec;
+ }
+ .title_bar hr
+ {
+   border: none;
+   height: 1px;
+   background-color: #7073764d;
+ }
+ .sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #343a40;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 9999;
+  box-shadow: 5px 5px 5px #30313242;
+}
+.dashboard-img-logo
+{
+	height: 73px;
+	width: 168px;
+	margin-left: 12px;
+}
+.dashboard-img-logo:hover,.main-heading:hover
+{
+  filter: drop-shadow(0px 0px 10px #009688);
+  cursor: pointer;
+}
+.main-heading
+{
+	margin-left: 20px;
+}
+.sidebar .pad
+{
+	margin-top: 10px;
+}
+.sidebar a {
+  display: block;
+  color: #ebecec;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar ul li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+  margin:10 10px;
+}
+.active-sidebar {
+	color: #fff;
+	/*border: 1px solid #009688;*/
+	background-color: #009688;
+	color: #fff;
+	padding: 5px 15px;
+	border-radius: 5px;
+	margin:10 10px;
+}
+
+/*Main Content*/
+.main-content
+{
+	margin-left: 200px;
+	padding: 100px 100px 0px 100px;
+}
+/*Title Name with Button*/
+.heading
+{
+	display: block;
+	height: 50px;
+	width: 1117px;
+	border: 1px solid black;
+}
+.logout-button
+{
+  margin-top: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*table css*/
+table {
+  width: 100%;
+  margin-bottom:30px;
+}
+
+table tr th {
+  background: #162941;
+  color: white;
+  text-align: left;
+}
+
+table tr td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  white-space: nowrap;
+}
+
+table tr:nth-child(odd) {
+  background-color: rgba(171, 206, 227, 0.3);
+}
+
+/*table tr:hover {
+  background-color: #abcee3;
+  }*/
+
+  table th,
+  table td {
+    padding: 0.5rem;
+  }
+  table .heading_title
+  {
+   font-size: 50px;
+   font-weight: bold;
+   text-align: center;
+   background-color: white;
+   color: #009688;
+ }
+ table .button-btn
+ {
+   background-color: white;
+   text-align: right;
+ }
+ table .button-btn .add
+ {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   background-color: #009688;
+   color: white;
+ }
+ table .button-btn .add:hover
+ {
+   border: none;
+   background-color: #343a40;
+   color: #ebecec;
+   border: none;
+   cursor: pointer;
+ }
+ @media screen and (max-width: 700px) {
+  table th {
+    display: none;
+  }
+
+  table tr {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "top-left top-right" "bottom-left bottom-right";
+  }
+
+  table tr td:first-child {
+    font-size: 1em;
+  }
+
+  table tr td {
+    padding: 0.1rem;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  table tr td:nth-child(3),
+  table tr td:nth-child(4) {
+    text-align: right;
+  }
+
+  table tr td.name {
+    grid-area: top-left;
+  }
+
+  table tr td.company {
+    grid-area: bottom-left;
+  }
+
+  table tr td.phone {
+    grid-area: top-right;
+  }
+
+  table tr td.email {
+    grid-area: bottom-right;
+  }
+}
+/*Lower Footer*/
+.lower-footer {
+	margin-left: 200px;
+	padding: 10px 100px 10px 100px;
+	background-color: #009688;
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.lower-footer .right-footer
+{
+	margin-left: 550px;
+}	
+
+/*-----------------------------------------*/
+/*Login Page CSS*/
+/*-----------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.login {
+  width: 400px;
+  margin: 75px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #009688;
+}
+
+.login-header {
+  background: #009688;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"],
+.login input[type="checkbox"]  {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus
+{
+  border-color: #888;
+}
+
+.login p input[type="checkbox"]
+{	
+	display: none;
+	margin-left: 200px;
+}
+.login input[type="checkbox"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: gray;
+}
+.login input[type="checkbox"]:checked + * {
+  color: teal;
+}
+input[type="checkbox"]:checked + *::before {
+  content: "✓";
+  color: white;
+  text-align: center;
+  background: teal;
+  border-color: teal;
+}
+.login input[type="submit"] {
+  background: #009688;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.login input[type="submit"]:hover {
+  background: #319d98;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+#checkbox{
+  margin-left: 110px;
+}
+
+/*-----------------------------------------*/
+/*Customized Alert Box*/
+/*-----------------------------------------*/
+#dialogoverlay
+{
+  display: none;
+  opacity: .8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+  width: 100%;
+  z-index: 10;
+}
+#dialogbox
+{
+  display: none;
+  position: fixed;
+  background: #000;
+  border-radius: 5px;
+  width: 500px;
+  z-index: 100;
+}
+#dialogbox > div > #dialogboxbody
+{
+  background-color: #009688;
+  padding: 20px;
+  font-size: 24px;
+  color: #FFF;
+}
+#dialogbox > div >#dialogboxfoot
+{
+  background-color: #343a40;
+  padding: 10px;
+  text-align: right;
+}
+#dialogboxfoot button
+{
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  background-color: #009688;  
+}
+#dialogboxfoot button:hover
+{
+  cursor: pointer;
+  background-color: #39847d;
+
+}
+

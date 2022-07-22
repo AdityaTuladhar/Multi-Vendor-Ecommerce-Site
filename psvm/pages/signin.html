@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Just Basic HTML" />
+    <meta name="Author" content=" Srijeet" />
+    <meta name="keywords" content="HTML CSS JAVASCRIPT" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        
+        /* Css Styles for blog */
+        .banner-content,
+        .banner-content span {
+            font-family: 'light';
+            font-size: 65px;
+            padding: 15px;
+            right: 50px;
+        }
+
+        .blog .mini-container>div {
+            padding: 10px 20px;
+            font-family: 'regular';
+            font-size: 20px;
+            line-height: 140%;
+        }
+
+        .blog {
+            margin-top: 70px;
+
+        }
+
+        .blog-item {
+            border: 1px solid #333;
+            height: 70vh;
+            border-radius: 10px 20px;
+
+        }
+
+        .button {
+            position: absolute;
+            top: 500px;
+            right: 180px;
+        }
+
+        .introduction .text,
+        .verdict .text {
+            margin-right: 15px;
+        }
+
+        .title img {
+            margin-top: 30px;
+            ;
+            width: 400px;
+            ;
+        }
+
+        .advantages .text,
+        .advantages .text {
+            margin-right: 15px;
+            ;
+        }
+
+        .content {
+            align-items: center;
+        }
+
+        /* Css for blog contents */
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <Nav id="header">
+        <div class="container flex-row navbar">
+            <div id="navigation" class="nav-section flex-row">
+                <div class="nav"><a href="../index.php">HOME</a></div>
+                <div class="nav"><a href="services.php">SERVICES</a></div>
+                <div class="nav"><a href="aboutus.php">ABOUT US</a></div>
+                <div class="nav "><a href="contactus.php">CONTACT US</a></div>
+                <div class="nav active"><a href="signin.html">SIGN IN</a></div>
+            </div>
+        </div>
+    </Nav>
+    <!-- End of Navbar -->
+
+
+    <div id="in"></div>
+    <!-- Navigation buttons to dynamically change content -->
+    <div class="tab" id="tab" style="margin-top: 80px; margin-bottom:-40px;">
+        <button class="tablinks active" onclick="openTab(event, 'signin')">Sign In</button>
+        <button class="tablinks" onclick="openTab(event, 'signup')">Sign Up</button>
+
+    </div>
+    <!-- Sign In Content -->
+        <div class="blog">
+        <div class="mini-container">
+            <div class="tabcontent signin" id="signin" style="display: block;">
+                <div class="content flex-column">
+                    <div class="title">SIGN IN</div>
+
+
+                    <form method="post" name="myForm" action="process.php" onsubmit="return validateLogin();">
+                        <div class="sign-in-htm">
+                            <div class="group">
+                                <label id="error-display"></label> <!-- Error Display -->
+
+                                <label for="user" class="label">Username</label>
+                                <input id="user" type="text" class="input" name="username" autocomplete="off">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Password</label>
+                                <input id="pass" type="password" class="input" data-type="password" name="password" autocomplete="new password">
+                            </div>
+                            <div class="group">
+                                <input id="check" type="checkbox" class="check" checked>
+                                <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                            </div>
+                            <div class="group">
+                                <input type="submit" type="button" value="Sign In">
+                            </div>
+                            <div class="hr"></div>
+                            <div class="foot-lnk">
+                                <a href="#forgot">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="tabcontent signup" id="signup">
+                <div class="content flex-column">
+                    <div class="title">SIGN UP</div>
+
+                    <form method="post" onsubmit="return validateSignup();" name="myForm1">
+                        <div class="sign-up-htm">
+                            <div class="group">
+                                <label class="error-display-signup"></label>
+                                <label for="user" class="label" id="username" name="username">Username</label>
+                                <input id="user" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label" id="password" name="password">Password</label>
+                                <input id="pass" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label" id="password" name="repeat-password">Repeat
+                                    Password</label>
+                                <input id="pass" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label" id="email" name="email">Email Address</label>
+                                <input id="pass" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <input type="submit" type="button" value="Sign Up">
+                            </div>
+                            <div class="hr"></div>
+                            <div class="foot-lnk">
+                                <label for="tab-1">Already Member?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Blog content -->
+
+    <!-- Footer -->
+    <Footer class="footer">
+        <div class="container">
+            <div class="row upper-footer ">
+                <div class="footer-item " style=" display:flex ; flex-direction:column;">
+                    <div class="footer-title">Contact Details</div>
+                    <div class="footer-text"><i class="fas fa-envelope"></i> Email</div>
+                    <div class="footer-text">sthapityashu@gmail.com</div>
+                    <div class="footer-text"><i class="fas fa-phone "></i> Phone</div>
+                    <div class="footer-text">+977 9808768922</div>
+                    <div class="footer-text">+97701 4226506</div>
+                </div>
+
+                
+
+                <div class="footer-item">
+                    <div class="sub-text">
+                        Follow us on:
+
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-item">
+                    <div class="sub-text">Newsletter</div>
+
+                    <form class="newsletter">
+                        <div class="input-group flex-row">
+                            <input type="text" name="search" placeholder="Email address">
+                            <button type="submit" class="btn btn-default">Subscribe</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="lower-footer">
+            <div class=" footer-details mini-container  flex-row">
+                <div class="left-footer"> &copy; Copyright Yashu &trade;2020. All rights Reserved. </div>
+                <div class="right-footer"> Developed by : Yashu Sthapit</div>
+            </div>
+        </div>
+
+        </div>
+    </Footer>
+    <!-- End of footer -->
+    <script src="../js/custom.js"></script>
+</body>
+
+</html>
