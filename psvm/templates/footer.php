@@ -1,6 +1,84 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<style>
+    /* Footer */
+.footer {
+	background-color: #333;
+}
+.row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 25px;
+	text-align: justify;
+	padding: 25px;
+	margin: 0 20px;
+	color: #fff;
+}
+.lower-footer {
+	/* padding: 0; */
+	background-color: rgb(41, 41, 41);
+	color: #fff;
+}
+.footer-details {
+	justify-content: space-between;
+}
+.footer-details > div {
+	font-size: 14px;
+}
+.footer-title {
+	cursor: pointer;
+	font-size: 18px;
+	padding: 10px 0;
+}
+.footer-text {
+	cursor: pointer;
+	font-size: 15px;
+	margin: 3px 0;
+}
+.footer-item .footer-text a {
+	text-decoration: none;
+	color: #fff;
+}
+/* hover effect for elements of footer */
+.footer-item .footer-title:hover,
+.footer-item .footer-text:hover,
+.footer-item a:hover {
+	color: #009866;
+}
+.social a {
+	height: 30px;
+	width: 30px;
+	background: #717171;
+	color: #fff;
+	border-radius: 100px;
+	display: inline-block;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 30px;
+}
+.social a:hover {
+	background-color: #009866;
+	color: #fff;
+}
+.newsletter .input-group input {
+	width: 200px;
+	height: 20px;
+	padding: 5px 15px;
+	border: none;
+	font-size: 14px;
+	border-radius: 4px 0 0 4px;
+	outline: none;
+}
+.newsletter .input-group button {
+	width: 100px;
+	height: 30px;
+	padding: 5px 15px;
+	border: none;
+	font-size: 14px;
+	border-radius: 0 4px 4px 0;
+}
+</style>
 <Footer class="footer">
         <div class="container-fluid px-0" >
             <div class="row upper-footer ">

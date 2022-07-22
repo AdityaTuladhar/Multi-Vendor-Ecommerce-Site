@@ -10,9 +10,7 @@
     <meta name = "keywords" content= "HTML CSS JAVASCRIPT"/>
     <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-
     <style>
                     /* for mid-contents */
         .index{
@@ -30,13 +28,10 @@
         /* Image style*/
         .item img{
             
-            width:50%;
+            width:250px;
             height:250px;
         }
-        /* Hover effect for image and text */
-        .item img:hover, .item a:hover{
-            transform: scale(1.1);
-        }
+
         /* Style for View More */
         .item .title{
             color: #000;
@@ -51,6 +46,38 @@
         .text{
             font-family: 'semibold';
         }
+        .carousel-item img{
+            max-height:72vh;
+        }
+        /**** Banner ****/
+
+            .banner-image {
+                position: relative;
+                padding-top: 5%;
+                height: 70%;
+            }
+
+            .banner-image img {
+                max-width: 100%;
+                height: 88vh;
+            }
+            .banner-content {
+                position: absolute;
+                right: 100px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .hero-text {
+                font-size: 70px;
+                font-family: "light";
+                text-align: center;
+            }
+            .sub-text h4 {
+                font-family: "thin";
+                font-size: 25px;
+            }
+        /* End of Banner */
+
     </style>
 </head>
 <body>
@@ -59,9 +86,9 @@
  
 
     <!-- Banner -->
-    <div class="banner ">
+    <div class="banner mb-5 ">
         <div id="img"  class="banner-image">
-            <img src="../images/research2.svg">
+            <img src="../images/research2.svg" alt="no_img_found">
         </div>
         <div class="banner-content flex-column">
             <div class="hero-text" style="text-transform: uppercase;">
@@ -69,34 +96,74 @@
             </div>
             
             <div class="button" style="margin-top: 20px;;">
-              <a href="#down"><button type="submit" class="btn btn-default btn-large" style="letter-spacing: 20;"> Scroll down</button></a>  
+              <a href="signin.php"><button type="submit" class="btn btn-default btn-large" style="letter-spacing: 20;"> Login </button></a>  
             </div>
         </div>
     </div>
 
     <!-- End of Banner -->
 
-    
-    <div class="index" id="down">
+    <!-- slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="../images/slider1.jpg" class="d-block w-100" alt="No_image_found">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="../images/slider2.jpg" class="d-block w-100" alt="No_image_found">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="../images/slider3.jpg" class="d-block w-100" alt="No_image_found">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</div>
+
+<!-- slider_end -->
+    <div class="index">
         <div class=" container title" >
-            View More
+            Services
         </div>
         <div class="index-content container ">
             <div class="item flex-column " >
-                <img src="../images/easyreturn.png" alt="blog">
+                <img class="website_detail" src="../images/easyreturn.png" alt="no_image_found">
                  <h5>Easy Return</h5>
             </div>
             <div class="item flex-column" >
-                <img src="../images/f&f.png" alt="cv">
+                <img class="website_detail" src="../images/f&f.png" alt="no_image_found">
                 <h5>Free & Fast shipping</h5>
             </div>
             
             <div class="item flex-column"  >
-                <img src="../images/sg.png" alt="">
+                <img class="website_detail" src="../images/sg.png" alt="no_image_found">
                 <h5>Satisfaction Gurantee</h5>
             </div>
             <div class="item flex-column"  >
-                <img src="../images/money.png" alt="">
+                <img class="website_detail" src="../images/money.png" alt="no_image_found">
                 <h5>Money back Gurantee</h5>
             </div>
         </div>
@@ -105,5 +172,7 @@
    <?php include'../templates/footer.php'; ?>
   
     <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
