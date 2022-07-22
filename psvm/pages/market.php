@@ -110,20 +110,7 @@ $result=mysqli_query($con,$query);
 </style>
 </head>
 <body >
-    <!-- Navbar -->
-    <Nav id="header">
-        <div class="container flex-row navbar" style="justify-content: flex-end;">
-            <div  id="navigation" class="nav-section flex-row">
-                <div class="nav " ><a href="../index.php">Home</a></div>
-                <div class="nav active"><a href="services.php">Services</a></div>
-                <div class="nav"><a href="aboutus.php">About us</a></div>
-                <div class="nav "><a href="contactus.php">Contact us</a></div>
-                <div class="nav"><a href="signin.html">Sign in</a></div>
-            </div>
-        </div>
-    </Nav>
-    
-    <!-- End of Navbar -->
+    <?php include '../header.php'?>
 
     <div id="internal" style="height:100px;"></div>
 

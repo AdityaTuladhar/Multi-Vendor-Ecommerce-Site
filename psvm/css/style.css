@@ -109,7 +109,8 @@ a {
 }
 .nav a {
 	color: #3e3e3e;
-	border-radius: 9%;
+	border-radius: 10%;
+	padding: 5px 5px;
 }
 /* Style for when a page is active */
 .active {
@@ -123,11 +124,8 @@ a {
 /* Hover effect for navigation bar */
 .nav a:hover {
 	color: #fff;
-	border: 1px solid #009688;
 	background-color: #009688;
-	color: #fff;
-	transition: 0.3s;
-	padding: 5px 5px;
+
 }
 
 /**** Banner ****/
@@ -173,7 +171,7 @@ a {
 }
 .lower-footer {
 	/* padding: 0; */
-	background-color: rgb(221, 77, 77);
+	background-color: rgb(41, 41, 41);
 	color: #fff;
 }
 .footer-details {
