@@ -9,8 +9,10 @@
     <meta name = "Author" content= " Srijeet"/>
     <meta name = "keywords" content= "HTML CSS JAVASCRIPT"/>
     <title>Home</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/featured.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <style>
                     /* for mid-contents */
         .index{
@@ -142,8 +144,22 @@
             <span class="visually-hidden">Next</span>
         </button>
 </div>
-
 <!-- slider_end -->
+<div class="container">
+
+        <div class="your-class">
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+            <div class="box">A</div>
+        </div>
+    </div>
+<!-- services start -->
     <div class="index">
         <div class=" container title" >
             Services
@@ -168,11 +184,17 @@
             </div>
         </div>
     </div>
-  
+  <!-- services end -->
    <?php include'../templates/footer.php'; ?>
   
-    <script src="js/custom.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../js/featured.js"></script>
+<script src="../js/custom.js"></script>
 </body>
 </html>
+
+
