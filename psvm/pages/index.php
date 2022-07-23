@@ -19,6 +19,7 @@
             background-image: linear-gradient( rgba(255, 253, 253, 0), rgb(235, 223, 223));
             position: relative;
             margin-top:200px;
+            margin-bottom:0px;
         }
         .index-content{
             display: grid;
@@ -29,9 +30,8 @@
         }
         /* Image style*/
         .item img{
-            
-            width:250px;
-            height:250px;
+            width:100px;
+            height:100px;
         }
 
         /* Style for View More */
@@ -79,14 +79,27 @@
                 font-size: 25px;
             }
         /* End of Banner */
-
+            .service-title{
+                max-width: 50%;
+                font-family: 'semibold';
+                font-size: 30px;
+                padding-bottom:15px;
+                text-align: center;
+            }
+            .service_img_detail{
+                width:200px;
+                text-align:center;
+                padding: 10px 0px;
+                font-size:18px;
+            }
+            .website_detail{
+                width:200px;
+                height:200px;
+            }
     </style>
 </head>
 <body>
-
    <?php include '../templates/header.php'; ?>
- 
-
     <!-- Banner -->
     <div class="banner mb-5 ">
         <div id="img"  class="banner-image">
@@ -102,7 +115,6 @@
             </div>
         </div>
     </div>
-
     <!-- End of Banner -->
 
     <!-- slider -->
@@ -143,45 +155,51 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-</div>
-<!-- slider_end -->
-<div class="container">
-
-        <div class="your-class">
-            <div class="box">A</div>
-            <div class="box">A</div>
-            <div class="box">A</div>
-            <div class="box">A</div>
-            <div class="box">A</div>
-            <div class="box">A</div>
-            <div class="box">A</div>
-            <div class="box">A</div>
-            <div class="box">A</div>
-        </div>
     </div>
+    <!-- slider_end -->
+
+    <div class="container">
+            <div class="multi-slider-header">
+                <div class="d-flex justify-content-center"><h5 class="title mt-5">Featured Products</h5></div>
+                <div class="your-class">
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                    <div class="box">A</div>
+                </div>
+            </div>
+    </div>
+
 <!-- services start -->
     <div class="index">
-        <div class=" container title" >
+        <div class=" container service-title" >
             Services
         </div>
-        <div class="index-content container ">
-            <div class="item flex-column " >
-                <img class="website_detail" src="../images/easyreturn.png" alt="no_image_found">
-                 <h5>Easy Return</h5>
-            </div>
-            <div class="item flex-column" >
-                <img class="website_detail" src="../images/f&f.png" alt="no_image_found">
-                <h5>Free & Fast shipping</h5>
-            </div>
-            
-            <div class="item flex-column"  >
-                <img class="website_detail" src="../images/sg.png" alt="no_image_found">
-                <h5>Satisfaction Gurantee</h5>
-            </div>
-            <div class="item flex-column"  >
-                <img class="website_detail" src="../images/money.png" alt="no_image_found">
-                <h5>Money back Gurantee</h5>
-            </div>
+        <div class=" container ">
+                <div class="d-flex ">
+                    <div class="px-5" >
+                        <img class="website_detail" src="../images/easyreturn.png" alt="no_image_found">
+                        <h6 class="service_img_detail">Easy Return</h6>
+                    </div>
+                    <div class="px-5" >
+                        <img class="website_detail" src="../images/f&f.png" alt="no_image_found">
+                        <h6 class="service_img_detail">Free & Fast shipping</h6>
+                    </div>
+                    
+                    <div class="px-5"  >
+                        <img class="website_detail" src="../images/sg.png" alt="no_image_found">
+                        <h6 class="service_img_detail">Satisfaction Gurantee</h6>
+                    </div>
+                    <div class=" px-5"  >
+                        <img class="website_detail" src="../images/money.png" alt="no_image_found">
+                        <h6 class="service_img_detail">Money back Gurantee</h6>
+                    </div>
+                </div>
         </div>
     </div>
   <!-- services end -->
