@@ -40,10 +40,9 @@
         }
         /* Style for when a page is active */
         .pageActive {
-                color: #fff;
+                color: #fff!important;
                 border: 1px solid #009688;
                 background-color: #009688;
-                color: #fff;
                 padding: 5px 15px;
                 border-radius: 5px;
         }
@@ -62,19 +61,23 @@
                 flex:80%;
         }
 </style>
+<?php 
+$link_arr = explode("/",$_SERVER['REQUEST_URI']);
+$file_name= $link_arr[count($link_arr)-1]
+;?>
 <header id="header">
         <div class="container ">
             <div class="d-flex  flex-row ">
-                    <div class="logo"><a href="../pages/index.php">
+                    <div class="logo"><a href="../pages/index.p hp">
                             <img src="../images/logo.png" alt="no-image">
                         </a>
                     </div>
                     <div class="list d-flex justify-content-end">
-                        <div class="nav"><a href="../pages/index.php">HOME</a></div>
-                        <div class="nav"><a href="../pages/market.php">MARKET</a></div>
-                        <div class="nav"><a href="../pages/aboutus.php">ABOUT US</a></div>
-                        <div class="nav"><a href="../pages/contactus.php">CONTACT US</a></div>
-                        <div class="nav"><a href="../pages/signup.php">SIGN UP</a></div>
+                        <div class="nav"><a href="../pages/index.php" <?php if($file_name=="index.php"){echo "class='pageActive'";}?>>HOME</a></div>
+                        <div class="nav"><a href="../pages/market.php" <?php if($file_name=="market.php"){echo "class='pageActive'";}?>>MARKET</a></div>
+                        <div class="nav"><a href="../pages/aboutus.php" <?php if($file_name=="aboutus.php"){echo "class='pageActive'";}?>>ABOUT US</a></div>
+                        <div class="nav"><a href="../pages/contactus.php" <?php if($file_name=="contactus.php"){echo "class='pageActive'";}?>>CONTACT US</a></div>
+                        <div class="nav"><a href="../pages/signup.php" <?php if($file_name=="signup.php"){echo "class='pageActive'";}?>>SIGN UP</a></div>
                     </div>
             </div>
     </div>
