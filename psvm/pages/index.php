@@ -11,6 +11,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/featured.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <style>
@@ -51,34 +52,7 @@
         .carousel-item img{
             max-height:72vh;
         }
-        /**** Banner ****/
-
-            .banner-image {
-                position: relative;
-                padding-top: 5%;
-                height: 70%;
-            }
-
-            .banner-image img {
-                max-width: 100%;
-                height: 88vh;
-            }
-            .banner-content {
-                position: absolute;
-                right: 100px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .hero-text {
-                font-size: 70px;
-                font-family: "light";
-                text-align: center;
-            }
-            .sub-text h4 {
-                font-family: "thin";
-                font-size: 25px;
-            }
-        /* End of Banner */
+       
             .service-title{
                 max-width: 50%;
                 font-family: 'semibold';

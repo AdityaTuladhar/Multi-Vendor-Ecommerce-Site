@@ -20,169 +20,156 @@
         display: block;
         transition: .3s;
         font-size:15px;
-    }
-    .form-container a:hover{
-        color:#009866;
-    }
-    /* Button for form */
-    .butn{
-        display: block;
-        width:100%;
-        height:50px;
-        border-radius: 50px;
-        font-family:'medium';
-        margin:16px 0;
-        padding:10px;
-        background-image: linear-gradient(to right, #009866, #0ee09e, #009866);
-        background-size: 200%;
-        color:#fff;
-        text-transform:uppercase;
-        font-size:20px;
-        cursor: pointer;
-        transition: .5s;
-        border:none;
-        outline:none;
-    }
-    .butn:hover{
-        background-position: right;
-    }
-    /* ***Button for forms*** */
-   
-    textarea{
-        resize:none;
-        overflow: hidden;
-    }
-    .form-container {
-        margin: 75px;
-        display: grid;
-        position: relative;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 2rem 0;
-        grid-gap: 7rem;
-    }
-    .img {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    .cover {
-        width: 500px;
-    }
-    .login-container {
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-    .form {
-        width: 360px;
-    }
+        }
+        .form-container a:hover{
+            color:#009866;
+        }
+        /* Button for form */
+        .butn{
+            display: block;
+            width:100%;
+            height:50px;
+            border-radius: 50px;
+            font-family:'medium';
+            margin:16px 0;
+            padding:10px;
+            background-image: linear-gradient(to right, #009866, #0ee09e, #009866);
+            background-size: 200%;
+            color:#fff;
+            text-transform:uppercase;
+            font-size:20px;
+            cursor: pointer;
+            transition: .5s;
+            border:none;
+            outline:none;
+        }
+        .butn:hover{
+            background-position: right;
+        }
+        /* ***Button for forms*** */
     
-    h2 {
-        font-size: 2.9rem;
-        margin: 15px 0;
-        text-transform: uppercase;
-        color: #333;
-    }
-    .input-div {
-        position: relative;
-        display: grid;
-        grid-template-columns: 7% 93%;
-        padding: 5px 0;
-        margin: 25px 0;
-        border-bottom: 2px solid #d9d9d9;
-    }
-   
-   
-  
-    .i {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .i i {
-        color: #009688;
-        transition: .3s;
-    }
-    .input-div > div {
-        position: relative;
-        height: 45px;
-    }
+        textarea{
+            resize:none;
+            overflow: hidden;
+        }
+        .form-container {
+            margin: 75px;
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 2rem 0;
+            grid-gap: 7rem;
+        }
+        .img {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .cover {
+            width: 500px;
+        }
+        .login-container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .form {
+            width: 360px;
+        }
+        
+        h2 {
+            font-size: 2.9rem;
+            margin: 15px 0;
+            text-transform: uppercase;
+            color: #333;
+        }
+        .input-div {
+            position: relative;
+            display: grid;
+            grid-template-columns: 7% 93%;
+            padding: 5px 0;
+            margin: 25px 0;
+            border-bottom: 2px solid #d9d9d9;
+        }
     
-    .input-div.one {
-        margin-top: -4px;
-    }
-    .input-div.two {
-        margin-bottom: 4px;
-    }
-    .input-div > div h5 {
-        position: absolute;
-        font-size: 18px;
-        left: 10px;
-        top: -5px%;
-        transform: translateY(-50%);
-        transition: .3s;
-        color: #999;
-        font-family: 'medium';
-    }
-    .input {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        border: none;
-        outline: none;
-        background: none;
-        padding: .5rem .7rem;
-        font-size: 1.2rem;
-        font-family: 'medium';
-    }
-    .three{
-        height:100px;
-        padding-bottom:40px;
-    }
-    /* Errors in forms */
-    .error{
-               position: absolute;
-               
-               font-size: 12px;
-               font-family: 'medium';
-               color:#009866;
-           }
-           #uerror{
-               display:none;
-               top:182px;
-               right:73px;
-           }
-           #perror{
-               display: none;
-               top:267px;
-               right:73px;
-           }
-           #terror{
-               display:none;
-               top:340px;
-               right:28px;
-           }
-           /* Css for forms */
+    
+    
+        .i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .i i {
+            color: #009688;
+            transition: .3s;
+        }
+        .input-div > div {
+            position: relative;
+            height: 45px;
+        }
+        
+        .input-div.one {
+            margin-top: -4px;
+        }
+        .input-div.two {
+            margin-bottom: 4px;
+        }
+        .input-div > div h5 {
+            position: absolute;
+            font-size: 18px;
+            left: 10px;
+            top: -5px%;
+            transform: translateY(-50%);
+            transition: .3s;
+            color: #999;
+            font-family: 'medium';
+        }
+        .input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            border: none;
+            outline: none;
+            background: none;
+            padding: .5rem .7rem;
+            font-size: 1.2rem;
+            font-family: 'medium';
+        }
+        .three{
+            height:100px;
+            padding-bottom:40px;
+        }
+        /* Errors in forms */
+        .error{
+                position: absolute;
+                
+                font-size: 12px;
+                font-family: 'medium';
+                color:#009866;
+            }
+            #uerror{
+                display:none;
+                top:182px;
+                right:73px;
+            }
+            #perror{
+                display: none;
+                top:267px;
+                right:73px;
+            }
+            #terror{
+                display:none;
+                top:340px;
+                right:28px;
+            }
+            /* Css for forms */
 
 
-</style>
+    </style>
 </head>
 <body style="background-image: linear-gradient( rgba(255,0,0,0), #eee);">
-    <!-- Navbar -->
-    <Nav id="header">
-        <div class="container flex-row navbar">
-            <div  id="navigation" class="nav-section flex-row">
-                <div class="nav" ><a href="../index.php">HOME</a></div>
-                <div class="nav"><a href="services.php">SERVICES</a></div>
-                <div class="nav"><a href="aboutus.php">ABOUT US</a></div>
-                <div class="nav active"><a href="contactus.php">CONTACT US</a></div>
-                <div class="nav"><a href="signin.html">SIGN IN</a></div>
-            </div>
-        </div>
-    </Nav>
-    <!-- End of Navbar -->
-
+<?php include '../templates/header.php' ?>
     <!--Main content  -->
     <form class="form-container"  name="contactForm" method="post" action="../php/insertContact.php" onsubmit=" return validateForm()">
         <div class="img">
@@ -233,54 +220,7 @@
     <!-- End of main content -->
 
       <!-- Footer -->
-      <Footer class="footer">
-        <div class="container">
-            <div class="row upper-footer ">
-                <div class="footer-item " style=" display:flex ; flex-direction:column;">
-                    <div class="footer-title">Contact Details</div>
-                    <div class="footer-text"><i class="fas fa-envelope"></i> Email</div>
-                    <div class="footer-text">sthapityashu@gmail.com</div>
-                    <div class="footer-text"><i class="fas fa-phone "></i> Phone</div>
-                    <div class="footer-text">+977 9808768922</div>
-                    <div class="footer-text">+97701 4226506</div>
-                </div>
-
-                <div class="footer-item">
-                    <div class="sub-text">
-                        Follow us on:
-    
-                    </div>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    </div>
-                </div>
-    
-                <div class="footer-item"> 
-                    <div class="sub-text">Newsletter</div>
-                    
-                            <form class="newsletter" >
-                                <div class="input-group flex-row" >
-                                    <input  type="text" name="search" placeholder="Email address">
-                                    <button type="submit" class="btn btn-default">Subscribe</button>
-                                </div>
-                            </form >
-                   
-                    </div>
-                   
-                </div>
-            </div>
-            <div class="lower-footer">
-                <div class=" footer-details mini-container  flex-row"  >
-                    <div class="left-footer"> &copy; Copyright Yashu &trade;2020. All rights Reserved. </div>
-                   <div class="right-footer"> Developed by : Yashu Sthapit</div></div>
-            </div>
-            
-        </div>
-    </Footer>
+      <?php include '../templates/footer.php' ?>
     <!-- End of footer -->
 
 
