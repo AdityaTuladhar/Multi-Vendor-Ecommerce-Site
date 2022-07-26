@@ -75,6 +75,7 @@
 <body>
    <?php include '../templates/header.php'; ?>
     <!-- Banner -->
+    <div style="height:12px;"></div>
     <div class="banner mb-5 ">
         <div id="img"  class="banner-image">
             <img src="../images/research2.svg" alt="no_img_found">
@@ -154,6 +155,7 @@
         <div class=" container service-title" >
             Services
         </div>
+        <div style="height:50px;"></div>
         <div class=" container ">
                 <div class="d-flex ">
                     <div class="px-5" >
@@ -177,6 +179,7 @@
         </div>
     </div>
   <!-- services end -->
+  <div style="height:50px; background-color:rgb(235, 223, 223);"></div>
    <?php include'../templates/footer.php'; ?>
   
 

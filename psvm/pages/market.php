@@ -23,7 +23,11 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    <style>
+        .offer_size img{
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,12 +35,10 @@
     <?php include '../templates/header.php' ?>
      <!-- Topbar Start -->
     <div class="container-fluid">
-       
+       <div style="height:27px;"></div>
         <div class="row align-items-center py-3 px-xl-5 mt-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
-                </a>
+                
             </div>
             <div class="col-lg-6 col-6 text-left">
                 <form action="">
@@ -44,7 +46,7 @@
                         <input type="text" class="form-control" placeholder="Search for products">
                         <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" style="font-size: 25px;"></i>
                             </span>
                         </div>
                     </div>
@@ -52,12 +54,8 @@
             </div>
             <div class="col-lg-3 col-6 text-right">
                 <a href="" class="btn border">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge">0</span>
-                </a>
-                <a href="" class="btn border">
-                    <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge">0</span>
+                    <i class="fas fa-shopping-cart text-primary" style="font-size: 25px;" ></i>
+                    <!-- <span class="badge">0</span> -->
                 </a>
             </div>
         </div>
@@ -66,7 +64,7 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid mb-5">
-        <div class="row border-top px-xl-5">
+        <div class="row border-top px-xl-5 pt-2">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
                     <h6 class="m-0">Categories</h6>
@@ -76,10 +74,10 @@
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">Men's Dresses</a>
-                                <a href="" class="dropdown-item">Women's Dresses</a>
-                                <a href="" class="dropdown-item">Baby's Dresses</a>
+                            <div class="dropdown-menu border-0 rounded-0 w-100 m-0">
+                                <a href="" class="dropdown-item"><i class="fa fa-angle-right px-3 mt-1"></i>Men's Dresses</a>
+                                <a href="" class="dropdown-item"><i class="fa fa-angle-right px-3 mt-1"></i>Women's Dresses</a>
+                                <a href="" class="dropdown-item"><i class="fa fa-angle-right px-3 mt-1"></i>Baby's Dresses</a>
                             </div>
                         </div>
                         <a href="" class="nav-item nav-link">Shirts</a>
@@ -142,37 +140,6 @@
         </div>
     </div>
     <!-- Navbar End -->
-
-    <!-- Featured Start -->
-    <div class="container-fluid pt-5">
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Featured End -->
 
     <!-- Categories Start -->
     <div class="container-fluid pt-5">
@@ -237,25 +204,25 @@
 
     <!-- Offer Start -->
     <div class="container-fluid offer pt-5">
-        <div class="row px-xl-5">
+        <div class="row px-xl-5" style="background-color:rgba(232, 232, 232, 0.3) ;">
             <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img src="img/offer-1.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
+                <div class="offer_size position-relative text-center text-md-right text-white mb-2 py-5 px-5">
+                    <img src="../images/offer1.jpg" alt="image">
+                    <!-- <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
                         <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
-                    <img src="img/offer-2.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
+                <div class="offer_size position-relative text-center text-md-left text-white mb-2 py-5 px-5">
+                    <img src="../images/offer2.jpg" alt="iamge">
+                    <!-- <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
                         <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -265,7 +232,7 @@
     <!-- Products Start -->
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Trandy Products</span></h2>
+            <h2 class="section-title px-5"><span class="px-2">Trendy Products</span></h2>
         </div>
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
@@ -282,7 +249,7 @@
                     </div>
                     <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1" ></i>Add To Cart</a>
                     </div>
                 </div>
             </div>

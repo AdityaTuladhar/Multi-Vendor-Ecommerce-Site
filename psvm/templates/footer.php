@@ -1,12 +1,14 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
 <style>
     /* Footer */
 .footer {
 	background-color: #333;
 }
-.row {
+.row-footer {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 25px;
@@ -44,7 +46,7 @@
 .footer-item .footer-title:hover,
 .footer-item .footer-text:hover,
 .footer-item a:hover {
-	color: #009866;
+	color: #0D6EFD;
 }
 .social a {
 	height: 30px;
@@ -58,7 +60,7 @@
 	line-height: 30px;
 }
 .social a:hover {
-	background-color: #009866;
+	background-color: #0D6EFD;
 	color: #fff;
 }
 .newsletter .input-group input {
@@ -81,7 +83,7 @@
 </style>
 <Footer class="footer">
         <div class="container-fluid px-0" >
-            <div class="row upper-footer ">
+            <div class="row row-footer upper-footer ">
                 <div class="footer-item " style=" display:flex ; flex-direction:column;">
                     <div class="footer-title">Contact Details</div>
                     <div class="footer-text"><i class="fas fa-envelope"></i> Email</div>

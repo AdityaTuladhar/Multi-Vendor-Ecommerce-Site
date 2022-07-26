@@ -15,10 +15,10 @@
                 position: fixed;
                 top: 0;
                 width: 100%;
-                background-color: rgba(245, 245, 245, 0.6);
+                background-color: rgb(245, 245, 245);
                 z-index: 99;
-                padding: 5px 0;
-                box-shadow: 0px 1px rgba(0, 0, 0, .6);
+                padding: 10px 0;
+                box-shadow: 0px 1px 1px rgb(197, 197, 197);
         }
         /*Nav img {
                 width: 75px;
@@ -36,20 +36,20 @@
         .nav a {
                 color: #3e3e3e;
                 border-radius: 10%;
-                padding: 5px 5px;
+                padding: 5px 9px;
         }
         /* Style for when a page is active */
         .pageActive {
                 color: #fff!important;
-                border: 1px solid #009688;
-                background-color: #009688;
+                border: 1px solid #0D6EFD;
+                background-color: #0D6EFD;
                 padding: 5px 15px;
                 border-radius: 5px;
         }
         /* Hover effect for navigation bar */
         .nav a:hover {
                 color: #fff;
-                background-color: #009688;
+                background-color: #0D6EFD;
 
         }
         .logo{
@@ -68,17 +68,17 @@ $file_name= $link_arr[count($link_arr)-1]
 <header id="header">
         <div class="container ">
             <div class="d-flex  flex-row ">
-                    <div class="logo"><a href="../pages/index.p hp">
+                    <div class="logo"><a href="../pages/index.php">
                             <img src="../images/logo.png" alt="no-image">
                         </a>
                     </div>
                     <div class="list d-flex justify-content-end">
-                        <div class="nav"><a href="../pages/index.php" <?php if($file_name=="index.php"){echo "class='pageActive'";}?>>HOME</a></div>
-                        <div class="nav"><a href="../pages/market.php" <?php if($file_name=="market.php"){echo "class='pageActive'";}?>>MARKET</a></div>
-                        <div class="nav"><a href="../pages/aboutus.php" <?php if($file_name=="aboutus.php"){echo "class='pageActive'";}?>>ABOUT US</a></div>
-                        <div class="nav"><a href="../pages/contactus.php" <?php if($file_name=="contactus.php"){echo "class='pageActive'";}?>>CONTACT US</a></div>
-                        <div class="nav"><a href="../pages/signup.php" <?php if($file_name=="signup.php"){echo "class='pageActive'";}?>>SIGN UP</a></div>
+                        <div class="nav"><a href="../pages/index.php" <?php if($file_name=="index.php"){echo "class='pageActive'";}?>>Home</a></div>
+                        <div class="nav"><a href="../pages/market.php" <?php if($file_name=="market.php"){echo "class='pageActive'";}?>>Market</a></div>
+                        <div class="nav"><a href="../pages/aboutus.php" <?php if($file_name=="aboutus.php"){echo "class='pageActive'";}?>>About us</a></div>
+                        <!-- <div class="nav"><a href="../pages/contactus.php" <?php if($file_name=="contactus.php"){echo "class='pageActive'";}?>>Contact us</a></div> -->
+                        <div class="nav"><a href="../pages/signup.php" <?php if($file_name=="signup.php"){echo "class='pageActive'";}?>>Sign up</a></div>
                     </div>
             </div>
     </div>
-    </header>
+</header>
