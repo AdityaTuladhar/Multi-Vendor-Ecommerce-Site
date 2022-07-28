@@ -73,7 +73,7 @@ $file_name= $link_arr[count($link_arr)-1]
                         </a>
                     </div>
                     <div class="list d-flex justify-content-end">
-                        <div class="nav"><a href="../pages/index.php" <?php if($file_name=="index.php"){echo "class='pageActive'";}?>>Home</a></div>
+                        <div class="nav"><a href="../pages/index.php" <?php if($file_name=="index.php" || $file_name==""){echo "class='pageActive'";}?>>Home</a></div>
                         <div class="nav"><a href="../pages/market.php" <?php if($file_name=="market.php"){echo "class='pageActive'";}?>>Market</a></div>
                         <div class="nav"><a href="../pages/aboutus.php" <?php if($file_name=="aboutus.php"){echo "class='pageActive'";}?>>About us</a></div>
                         <!-- <div class="nav"><a href="../pages/contactus.php" <?php if($file_name=="contactus.php"){echo "class='pageActive'";}?>>Contact us</a></div> -->
