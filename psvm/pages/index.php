@@ -1,3 +1,11 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ecommerce";
+$con = new mysqli($servername,$username,$password,$dbname); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,15 +145,38 @@
             <div class="multi-slider-header">
                 <div class="d-flex justify-content-center"><h5 class="title mt-5">Featured Products</h5></div>
                 <div class="your-class">
-                    <div class="box">A</div>
-                    <div class="box">A</div>
-                    <div class="box">A</div>
-                    <div class="box">A</div>
-                    <div class="box">A</div>
-                    <div class="box">A</div>
-                    <div class="box">A</div>
-                    <div class="box">A</div>
-                    <div class="box">A</div>
+                    <?php
+                    $product_query="SELECT * FROM products order by id DESC";
+                    $product_result = mysqli_query($con,$product_query);
+                    $count = 0;
+                    while($product_row = mysqli_fetch_assoc($product_result)){
+                        echo "
+                        <div class=' col-md-6 col-sm-12 pb-1'>
+                        <div class='card product-item border-0 mb-4'>
+                            <div class='card-header product-img position-relative overflow-hidden bg-transparent border p-0'>
+                                <img class='img-fluid w-100' src='".$product_row['image_url']."' alt='>
+                            </div>
+                            <div class='card-body border-left border-right text-center p-0 pt-4 pb-3'>
+                                <h6 class='text-truncate text-center mb-3'>".$product_row['name']."</h6>
+                                <div class='d-flex justify-content-center'>
+                                    <h6>Rs.".$product_row['price']."</h6>
+                                </div>
+                            </div>
+                            <div class='card-footer d-flex justify-content-between bg-light border'>
+                                <a href='productdetail.php?id=".$product_row['id']."' class='btn btn-sm text-dark p-0'><i class='fas fa-eye text-primary mr-1'></i>View Detail</a>
+                                <a href='' class='btn btn-sm text-dark p-0'><i class='fas fa-shopping-cart text-primary mr-1' ></i>Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                        ";
+                        $count = $count +1;
+                        if($count>=8){
+                            break;
+                        }
+                    }
+
+                    ?>
+
                 </div>
             </div>
     </div>
