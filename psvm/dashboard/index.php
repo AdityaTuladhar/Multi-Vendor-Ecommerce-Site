@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>SHREEYSW</title>
+  <title>E-Commerce</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/bundles/datatables/datatables.min.css">
@@ -45,14 +45,7 @@
              
            </a></li>
            <li>
-            <form class="form-inline mr-auto">
-              <div class="search-element">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
-                <button class="btn" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </form>
+          
           </li>
         </ul>
       </div>
@@ -114,9 +107,8 @@
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-15">Card</h5>
+                            <h5 class="font-15">No. of Orders</h5>
                             <h2 class="mb-3 font-18">258</h2>
-                            <p class="mb-0"><span class="col-green">10%</span> Increase</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -138,9 +130,8 @@
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-15"> Card</h5>
+                            <h5 class="font-15"> Products</h5>
                             <h2 class="mb-3 font-18">1,287</h2>
-                            <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -163,10 +154,8 @@
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-15">Card</h5>
+                            <h5 class="font-15"> </h5>
                             <h2 class="mb-3 font-18">128</h2>
-                            <p class="mb-0"><span class="col-green">18%</span>
-                            Increase</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -189,9 +178,8 @@
                       <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                           <div class="card-content">
-                            <h5 class="font-15">Card</h5>
+                            <h5 class="font-15">Vendor</h5>
                             <h2 class="mb-3 font-18">697</h2>
-                            <p class="mb-0"><span class="col-green">42</span> Increase</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
