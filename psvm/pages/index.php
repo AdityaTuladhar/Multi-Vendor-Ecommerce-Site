@@ -94,7 +94,7 @@ $con = new mysqli($servername,$username,$password,$dbname);
             </div>
             
             <div class="button" style="margin-top: 20px;;">
-              <a href="signin.php"><button type="submit" class="btn btn-default btn-large" style="letter-spacing: 20;"> Login </button></a>  
+              <a href="login.php"><button type="submit" class="btn btn-default btn-large" style="letter-spacing: 20;"> Login </button></a>  
             </div>
         </div>
     </div>

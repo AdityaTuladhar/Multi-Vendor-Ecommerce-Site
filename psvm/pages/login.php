@@ -1,69 +1,47 @@
-<title>Invoice System</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
 <style>
-    body,
-    #head {
-        font-family: 'Montserrat', sans-serif;
-    }
+
 </style>
-<script src="js/invoice.js"></script>
-<link href="css/signin_login.css" rel="stylesheet">
-<?php include('inc/container.php'); ?>
-<!-- Nav Bar -->
-<nav class="navbar navbar-light  navbar-dark" style="background-color: #23b7e5">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#" title="Invoice Software Company">
-            <img src="images/logo.png" alt="Brand" width="150" height="30" class="d-inline-block align-text-top" style="margin-left: -30px; margin-right: -25px">
-            InveWare
-        </a>
-    </div>
-</nav>
-
-<!-- login content -->
-<div class="container w-75 my-3 shadow p-3 mb-5 mt-4 bg-white rounded">
-    <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12">
-            <figure>
-                <img src="images/login.jpg" class="img-fluid" alt="sing up image" />
-            </figure>
-            <a href="sign_in.php" class="signup-image-link text-center" id="Login">
-                Create an account
-            </a>
-        </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 text-center my-5">
-            <h3 id="head">Sign Up</h3>
-
-            <form method="POST" class="register-form p-5" id="register-form">
-
-                <div class="form-group p-3">
+<body>
+<?php include '../templates/header.php' ?>
+    <div style="height:70px;"></div>
+    <div class="container">
+        <div class="row bg-img">
+            <div class="col-4"></div>
+            <div class=" col-4 px-5 rounded mt-5 bg-light pb-5" style="box-shadow:  3px 7px 10px 7px rgba(197, 197, 197,0.7);;" >
+                <form class="">
+                    <h2 class="mb-5 mt-2 pt-3 text-center">Login</h2>
                     <div class="form-group">
-                        <label for="email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </label>
+                        <div class=""><label for="username">Username</label>
+                            <input type="text" name="name" placeholder="Name" class="form-control my-2">
+                        </div>
                     </div>
-                    <div class="form-group c">
-                        <input class="form-control" type="email" name="email" id="email" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Your Email" autoComplete="off" style=" width: 300px;" required />
+                    <div class="form-group mt-3">
+                        <div class=""><label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Password" class="form-control my-2"></div>
                     </div>
-                </div>
-                <div class="form-group p-3">
-                    <div class="form-group">
-                        <label for="password">
-                            <i class="fa-solid fa-lock"></i>
-                        </label>
+                    <div class="form-group pb-3">
+                    <button class="btn btn-primary mt-3">Login</button><br>
+                    <a href="login.php" >Register now</a>
                     </div>
-                    <div class="form-group c">
-                        <input class="form-control" type="password" name="password" id="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Password" autoComplete="off" style=" width: 300px;" required />
-                    </div>
-                </div>
-
-                <div class="form-group form-button p-3">
-
-                    <button type="submit" name="login" id="login" class="btn btn-info" style="width:100%;">Sign Up</button>
-
-                </div>
-
-            </form>
-
+                </form>
+            </div>
+            <div class="col-4">
+                <!-- <img src="../images/pressplay.svg" alt=""> -->
+            </div>
         </div>
     </div>
-</div>
-</div>
+    
+    <div style="height:70px;"></div>
+    <!-- <?php include '../templates/footer.php' ?> -->
+</body>
+</html>
