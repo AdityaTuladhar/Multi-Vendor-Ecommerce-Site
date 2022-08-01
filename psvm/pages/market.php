@@ -490,29 +490,39 @@ if (isset($_GET["category"])) {
         //     //     if (types.indexOf("<option value='" + type + "'>" + type + "</option>") == -1) {
         //     //         types += "<option value='" + type + "'>" + type + "</option>";            }       
         // }  $("#products").html(products);
+        $(function () {
+    $('button').on('click', function () {  
         $.ajax({
             url: 'demo1.php',
             method: 'POST',
             dataType: 'json',
             success: function(data) {
-                var products = "",
+                var id = "",
+                products = "",
                     name = "",
                     details = "";
+                    
                 for (var i = 0; i < data.length; i++) {
-                    var name = data[i].name,
+                    var id=data[i].id,
+                        name = data[i].name,
                         detail = data[i].details,
                         price = data[i].price,
                         rawPrice = price.replace("$", ""),
                         rawPrice = parseInt(rawPrice.replace(",", "")),
                         image = data[i].image_url;
-                    products += "<div class='col-sm-4 product border border-dark'  data-name='" + name + "' data-detail='" + detail + "' data-price='" + rawPrice + "'><div class='product-inner text-center'><img src='" + image + "' class='image-responsive' height='200px' width='150px' ><br />Name: " + name + "<br />Details: " + detail + "<br />Price: " + price + "</div></div>";
-
+                        
+                    products += "<div class='col-lg-4 col-md-6 col-sm-12 pb-1'><div class='card product-item border-0 mb-4'><div class='card-header product-img position-relative overflow-hidden bg-transparent border p-0'><img class='img-fluid w-100' src='" +image + "' alt=''></div><div class='card-body border-left border-right text-center p-0 pt-4 pb-3'><h6 class='text-truncate mb-3'>" +name + "</h6><div class='d-flex justify-content-center'> <h6>Rs." + price + "</h6></div></div><div class='card-footer d-flex justify-content-between bg-light border'><a href='productdetail.php?id=" + id + "' class='btn btn-sm text-dark p-0'><i class='fas fa-eye text-primary mr-1'></i>View Detail</a><a href='' class='btn btn-sm text-dark p-0'><i class='fas fa-shopping-cart text-primary mr-1'></i>Add To Cart</a></div></div></div>";
                     //create product cards
                 }
-                $("#products").html(products);
+                $(".mb-5.mt-2").text("Search Result");
+                $(".row.pb-3").html(products);
             }
 
         });
+    });
+        });
+
+        
 
 
         // $(".filter-make").append(makes);
