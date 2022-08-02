@@ -18,11 +18,11 @@
         <div class="row bg-img">
             <div class="col-4"></div>
             <div class=" col-4 px-5 rounded mt-5 bg-light pb-5" style="box-shadow:  3px 7px 10px 7px rgba(197, 197, 197,0.7);;" >
-                <form class="">
+                <form class="" action="validate_log_in.php" method="POST" enctype="multipart/form-data">
                     <h2 class="mb-5 mt-2 pt-3 text-center">Login</h2>
                     <div class="form-group">
-                        <div class=""><label for="username">Username</label>
-                            <input type="text" name="name" placeholder="Name" class="form-control my-2">
+                        <div class=""><label for="email">Email</label>
+                            <input type="text" name="email" placeholder="Email" class="form-control my-2">
                         </div>
                     </div>
                     <div class="form-group mt-3">
@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group pb-3">
                     <button class="btn btn-primary mt-3">Login</button><br>
-                    <a href="login.php" >Register now</a>
+                    <a href="signup.php" >Register now</a>
                     </div>
                 </form>
             </div>
