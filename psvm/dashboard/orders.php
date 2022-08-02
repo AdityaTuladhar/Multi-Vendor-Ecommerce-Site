@@ -67,7 +67,7 @@ $result = mysqli_query($con,$query);
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>SHREEYSW</title>
+  <title>E-commerece</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/bundles/datatables/datatables.min.css">
@@ -119,7 +119,7 @@ $result = mysqli_query($con,$query);
           <div class="dropdown-menu dropdown-menu-right pullDown">
             <div class="dropdown-title">Hello Admin</div>
             <div class="dropdown-divider"></div>
-            <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+            <a href="../pages/logout.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
               Logout
             </a>
           </div>
@@ -129,15 +129,12 @@ $result = mysqli_query($con,$query);
     <div class="main-sidebar sidebar-style-2">
       <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-          <a href="index.html"> <img alt="image" src="assets/img/a.png" class="header-logo" /> <span
+          <a href="#"> <img alt="image" src="assets/img/a.png" class="header-logo" /> <span
             class="logo-name" style="color:white;">E-Commerce</span>
           </a>
         </div>
         <ul class="sidebar-menu">
           <li class="menu-header">Main</li>
-          <li class="dropdown">
-            <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
-          </li>
           <li class="dropdown">
             <a href="admin_trans_list.php" class="nav-link"><i data-feather="user"></i><span>Users</span></a>
           </li>
@@ -160,108 +157,7 @@ $result = mysqli_query($con,$query);
         <!-- Main Content -->
         <div class="main-content">
           <section class="section">
-            <div class="row ">
-              <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!-- First Card -->
-                <div class="card">
-                  <div class="card-statistic-4">
-                    <div class="align-items-center justify-content-between">
-                      <div class="row ">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                          <div class="card-content">
-                            <h5 class="font-15">Card</h5>
-                            <h2 class="mb-3 font-18">258</h2>
-                            <p class="mb-0"><span class="col-green">10%</span> Increase</p>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                          <div class="banner-img">
-                            <img src="assets/img/banner/1.png" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- First Card Ends -->
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!-- Second Card  -->
-                <div class="card">
-                  <div class="card-statistic-4">
-                    <div class="align-items-center justify-content-between">
-                      <div class="row ">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                          <div class="card-content">
-                            <h5 class="font-15"> Card</h5>
-                            <h2 class="mb-3 font-18">1,287</h2>
-                            <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                          <div class="banner-img">
-                            <img src="assets/img/banner/2.png" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Second Card Ends -->
-              </div>
-
-              <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!-- Third Card -->
-                <div class="card">
-                  <div class="card-statistic-4">
-                    <div class="align-items-center justify-content-between">
-                      <div class="row ">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                          <div class="card-content">
-                            <h5 class="font-15">Card</h5>
-                            <h2 class="mb-3 font-18">128</h2>
-                            <p class="mb-0"><span class="col-green">18%</span>
-                            Increase</p>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                          <div class="banner-img">
-                            <img src="assets/img/banner/3.png" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Third Card Ends -->
-              </div>
-
-              <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="card">
-                  <!-- Fourth Card -->
-                  <div class="card-statistic-4">
-                    <div class="align-items-center justify-content-between">
-                      <div class="row ">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                          <div class="card-content">
-                            <h5 class="font-15">Card</h5>
-                            <h2 class="mb-3 font-18">697</h2>
-                            <p class="mb-0"><span class="col-green">42</span> Increase</p>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                          <div class="banner-img">
-                            <img src="assets/img/banner/4.png" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Fourth Card Ends -->
-                  <!-- ....................................... -->
-                </div>
-              </div>
-            </div>
+            
 
             <!-- .............................................. -->
             <!-- Main Data Table  -->
@@ -284,6 +180,7 @@ $result = mysqli_query($con,$query);
                             <th>Status ID</th>
                             <th>Product ID</th>
                             <th>User ID</th>
+                            <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -425,7 +322,7 @@ $result = mysqli_query($con,$query);
         </div>
         <footer class="main-footer">
           <div class="footer-left">
-            <span>&copy; 2022 Ajashala Bajracharya || All Right Reserve. </span>
+            <span>&copy; 2022 Copyright Claimed || All Right Reserve. </span>
           </div>
           <div class="footer-right">
           </div>

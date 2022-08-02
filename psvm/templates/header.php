@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/all.min.css">
 <link rel="stylesheet" href="../css/style.css">
@@ -62,6 +65,7 @@
         }
 </style>
 <?php 
+
 $link_arr = explode("/",$_SERVER['REQUEST_URI']);
 $file_name= $link_arr[count($link_arr)-1]
 ;?>
@@ -77,7 +81,16 @@ $file_name= $link_arr[count($link_arr)-1]
                         <div class="nav"><a href="../pages/market.php" <?php if($file_name=="market.php"){echo "class='pageActive'";}?>>Market</a></div>
                         <div class="nav"><a href="../pages/aboutus.php" <?php if($file_name=="aboutus.php"){echo "class='pageActive'";}?>>About us</a></div>
                         <!-- <div class="nav"><a href="../pages/contactus.php" <?php if($file_name=="contactus.php"){echo "class='pageActive'";}?>>Contact us</a></div> -->
-                        <div class="nav"><a href="../pages/signup.php" <?php if($file_name=="signup.php"){echo "class='pageActive'";}?>>Sign up</a></div>
+                        <?php
+                        if((!isset($_SESSION["user_id"]))){?>
+                                <div class="nav"><a href="../pages/signup.php" <?php if($file_name=="signup.php"){echo "class='pageActive'";}?>>Signup</a></div>
+                        <?php
+                        }
+                        else{?>
+                        <div class="nav"><a href="../pages/logout.php">Logout</a></div>
+                        <?php
+                        }
+                        ?>
                     </div>
             </div>
     </div>

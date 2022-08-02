@@ -58,7 +58,9 @@ if (isset($_GET["category"])) {
         <div style="height:27px;"></div>
         <div class="row  py-3 px-xl-5 mt-5">
             <div class="col-lg-3 d-none d-lg-block">
-
+                    <?php
+                        include 'username.php';
+                    ?>
             </div>
             <div class="col-lg-6 col-6 text-left">
                 <div id="search">

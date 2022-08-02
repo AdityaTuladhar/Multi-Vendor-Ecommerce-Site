@@ -115,7 +115,7 @@ $result = mysqli_query($con,$query);
           <div class="dropdown-menu dropdown-menu-right pullDown">
             <div class="dropdown-title">Hello Admin</div>
             <div class="dropdown-divider"></div>
-            <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+            <a href="../pages/logout.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
               Logout
             </a>
           </div>
@@ -125,15 +125,12 @@ $result = mysqli_query($con,$query);
     <div class="main-sidebar sidebar-style-2">
       <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-          <a href="index.html"> <img alt="image" src="assets/img/a.png" class="header-logo" /> <span
+          <a href="#"> <img alt="image" src="assets/img/a.png" class="header-logo" /> <span
             class="logo-name" style="color:white;">E-Commerce</span>
           </a>
         </div>
         <ul class="sidebar-menu">
           <li class="menu-header">Main</li>
-          <li class="dropdown">
-            <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
-          </li>
           <li class="dropdown">
             <a href="admin_trans_list.php" class="nav-link"><i data-feather="user"></i><span>Users</span></a>
           </li>
@@ -250,7 +247,7 @@ $result = mysqli_query($con,$query);
         </div>
         <footer class="main-footer">
           <div class="footer-left">
-            <span>&copy; 2022 Ajashala Bajracharya || All Right Reserve. </span>
+            <span>&copy; 2022 Copyright Claimed || All Right Reserve. </span>
           </div>
           <div class="footer-right">
           </div>
