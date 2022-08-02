@@ -61,60 +61,73 @@ if (isset($_GET["category"])) {
 
             </div>
             <div class="col-lg-6 col-6 text-left">
-                <div class="row" id="search">
-                    <form id="search-form" action="" method="POST" enctype="multipart/form-data">
-                        <div class="form-group col-9">
-                            <input class="form-control" type="text" placeholder="Search" />
+                <div id="search">
+                    <form class="form-inline" id="search-form" action="" method="POST" enctype="multipart/form-data">
+                        <div class="form-group mb-2">
+                            <input class="form-control" type="text" id="search1"  placeholder="Search" />
                         </div>
-                        <div class="form-group col-3">
-                            <button type="submit" class="btn btn-block btn-primary">Search</button>
-                        </div>
+                        <button type="submit" id="onSearch"  class="btn btn-primary">Search</button>
                     </form>
                 </div>
-                <div class="row" id="filter">
-                    <form>
-                        <div class="form-group col-sm-3 col-xs-6">
-                            <select data-filter="make" class="filter-make filter form-control">
-                                <option value="">Select Make</option>
-                                <option value="">Show All</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-sm-3 col-xs-6">
-                            <select data-filter="model" class="filter-model filter form-control">
-                                <option value="">Select Model</option>
-                                <option value="">Show All</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-sm-3 col-xs-6">
-                            <select data-filter="type" class="filter-type filter form-control">
-                                <option value="">Select Type</option>
-                                <option value="">Show All</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-sm-3 col-xs-6">
-                            <select data-filter="price" class="filter-price filter form-control">
-                                <option value="">Select Price Range</option>
-                                <option value="">Show All</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
+                
             </div>
-            <!-- <div class="col-lg-3 col-6 text-right">
+            <div class="col-lg-3 col-6 text-right">
             <a href="" class="btn border">
                 <i class="fas fa-shopping-cart text-primary" style="font-size: 25px;" ></i>
             </a>
-        </div> -->
+        </div> 
         </div>
     </div>
     <!-- Topbar End -->
     <div class="row" id="products">
 
     </div>
+    <div id='secret' style="display:none;">
+        <!-- Shop Start -->
+    <div class='row px-xl-5'>
+    <!-- Shop Sidebar Start -->
+    <div class='col-lg-3 col-md-12'>
+    <!-- Price Start -->
+    <div class='border-bottom'>
+
+    </div>
+    <!-- Price End -->
+    <div class='col-lg-12  d-none d-lg-block'>
+    <a class='btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100' data-toggle='collapse' href='#navbar-vertical' style='height: 65px; margin-top: -1px; padding: 0 30px;'>
+    <h6 class='m-0'>Categories</h6>
+    <i class='fa fa-angle-down text-dark'></i>
+    </a>
+    <nav class='collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0' id='navbar-vertical'>
+    <div class='navbar-nav w-100 overflow-hidden' style='height: 410px'>
+    <?php
+        $category_query = 'SELECT * FROM product_categories';
+        $category_result = mysqli_query($con, $category_query);
+        while ($category_row = mysqli_fetch_assoc($category_result)) {
+            echo "<a href='market.php?category=" . $category_row['id'] . "' class='nav-item nav-link'>" . $category_row['category'] . "</a>";
+        }
+        ?>
+  </div>
+    </nav>
+    </div>
+    </div>
+    <!-- Shop Sidebar End -->
+
+    <!-- Shop Product Start -->
+    <div class='col-lg-9 col-md-12'>
+    <h3 class='mb-5 mt-2' style='text-align:center;'> </h3>
+    <div class='row pb-3'>
+        
+    </div>
+    </div>
+    <!-- Shop Product End -->
+    </div>
+
+    </div>
     <?php
     if (!isset($_GET["category"])) {
         echo "
     <!-- Navbar Start -->
+    <div class='main-body'>
     <div class='container-fluid mb-5'>
     <div class='row border-top px-xl-5 pt-2'>
     <div class='col-lg-3 d-none d-lg-block'>
@@ -319,11 +332,13 @@ if (isset($_GET["category"])) {
 
         echo "</div>
     </div>
+    </div>
     <!-- Products End -->
     ";
     } else {
         echo "
     <!-- Shop Start -->
+    <div class='main-body'>
     <div class='container-fluid'>
     <div class='row px-xl-5'>
     <!-- Shop Sidebar Start -->
@@ -384,6 +399,7 @@ if (isset($_GET["category"])) {
     <!-- Shop Product End -->
     </div>
     </div>
+    <div>
     <!-- Shop End -->
 
     ";
@@ -490,37 +506,97 @@ if (isset($_GET["category"])) {
         //     //     if (types.indexOf("<option value='" + type + "'>" + type + "</option>") == -1) {
         //     //         types += "<option value='" + type + "'>" + type + "</option>";            }       
         // }  $("#products").html(products);
-        $(function () {
-    $('button').on('click', function () {  
-        $.ajax({
-            url: 'demo1.php',
-            method: 'POST',
-            dataType: 'json',
-            success: function(data) {
-                var id = "",
-                products = "",
-                    name = "",
-                    details = "";
+        
+        
+        
+    //     $(function () {
+    // $('button').on('click', function () {  
+    //     $.ajax({
+    //         url: 'demo1.php',
+    //         method: 'POST',
+    //         dataType: 'json',
+    //         success: function(data) {
+    //             var id = "",
+    //             products = "",
+    //                 name = "",
+    //                 details = "";
                     
-                for (var i = 0; i < data.length; i++) {
-                    var id=data[i].id,
-                        name = data[i].name,
-                        detail = data[i].details,
-                        price = data[i].price,
-                        rawPrice = price.replace("$", ""),
-                        rawPrice = parseInt(rawPrice.replace(",", "")),
-                        image = data[i].image_url;
+    //             for (var i = 0; i < data.length; i++) {
+    //                 var id=data[i].id,
+    //                     name = data[i].name,
+    //                     detail = data[i].details,
+    //                     price = data[i].price,
+    //                     rawPrice = price.replace("$", ""),
+    //                     rawPrice = parseInt(rawPrice.replace(",", "")),
+    //                     image = data[i].image_url;
                         
-                    products += "<div class='col-lg-4 col-md-6 col-sm-12 pb-1'><div class='card product-item border-0 mb-4'><div class='card-header product-img position-relative overflow-hidden bg-transparent border p-0'><img class='img-fluid w-100' src='" +image + "' alt=''></div><div class='card-body border-left border-right text-center p-0 pt-4 pb-3'><h6 class='text-truncate mb-3'>" +name + "</h6><div class='d-flex justify-content-center'> <h6>Rs." + price + "</h6></div></div><div class='card-footer d-flex justify-content-between bg-light border'><a href='productdetail.php?id=" + id + "' class='btn btn-sm text-dark p-0'><i class='fas fa-eye text-primary mr-1'></i>View Detail</a><a href='' class='btn btn-sm text-dark p-0'><i class='fas fa-shopping-cart text-primary mr-1'></i>Add To Cart</a></div></div></div>";
-                    //create product cards
-                }
-                $(".mb-5.mt-2").text("Search Result");
-                $(".row.pb-3").html(products);
-            }
+    //                 products += "<div class='col-lg-4 col-md-6 col-sm-12 pb-1'><div class='card product-item border-0 mb-4'><div class='card-header product-img position-relative overflow-hidden bg-transparent border p-0'><img class='img-fluid w-100' src='" +image + "' alt=''></div><div class='card-body border-left border-right text-center p-0 pt-4 pb-3'><h6 class='text-truncate mb-3'>" +name + "</h6><div class='d-flex justify-content-center'> <h6>Rs." + price + "</h6></div></div><div class='card-footer d-flex justify-content-between bg-light border'><a href='productdetail.php?id=" + id + "' class='btn btn-sm text-dark p-0'><i class='fas fa-eye text-primary mr-1'></i>View Detail</a><a href='' class='btn btn-sm text-dark p-0'><i class='fas fa-shopping-cart text-primary mr-1'></i>Add To Cart</a></div></div></div>";
+    //                 //create product cards
+    //             }
+    //             //$(".mb-5.mt-2").text("Search Result");
+    //             $(".main-body").hide();
+    //             $("#secret").show();
+    //             $(".row.pb-3").html(products);
+    //             $(".mb-5.mt-2").text("Search Result");
+    //         }
 
-        });
-    });
-        });
+    //     });
+    // });
+    //     });
+
+
+        $('#onSearch').click(()=>{
+            var obj=  $('#search1').val();
+            if($('#search1').val()==''){
+                $(".main-body").hide();
+                $("#secret").show();
+                $(".row.pb-3").html('');
+                $(".mb-5.mt-2").text("Search Result");
+            }
+            else{
+            
+                $.ajax({
+                url: 'demo1.php',
+                method: 'POST',
+                dataType: 'json',
+                data:{data:obj},
+                success: function(data) {
+                    
+                    if(data.length==0){
+                        $(".main-body").hide();
+                        $("#secret").show();
+                        $(".row.pb-3").html('<h1>No available products </h1>');
+                        $(".mb-5.mt-2").text("Search Result");
+                    }
+                    else{
+                    var id = "",
+                    products = "",
+                        name = "",
+                        details = "";
+                        
+                    for (var i = 0; i < data.length; i++) {
+                        var id=data[i].id,
+                            name = data[i].name,
+                            detail = data[i].details,
+                            price = data[i].price,
+                            rawPrice = price.replace("$", ""),
+                            rawPrice = parseInt(rawPrice.replace(",", "")),
+                            image = data[i].image_url;
+                            
+                        products += "<div class='col-lg-3 col-md-3 col-sm-12 pb-1'><div class='card product-item border-0 mb-4'><div class='card-header product-img position-relative overflow-hidden bg-transparent border p-0'><img class='img-fluid w-100' src='" +image + "' alt=''></div><div class='card-body border-left border-right text-center p-0 pt-4 pb-3'><h6 class='text-truncate mb-3'>" +name + "</h6><div class='d-flex justify-content-center'> <h6>Rs." + price + "</h6></div></div><div class='card-footer d-flex justify-content-between bg-light border'><a href='productdetail.php?id=" + id + "' class='btn btn-sm text-dark p-0'><i class='fas fa-eye text-primary mr-1'></i>View Detail</a><a href='' class='btn btn-sm text-dark p-0'><i class='fas fa-shopping-cart text-primary mr-1'></i>Add To Cart</a></div></div></div>";
+                        //create product cards
+                    }
+                // $(".mb-5.mt-2").text("Search Result");
+                // $(".row.pb-3").html(products);
+                $(".main-body").hide();
+                $("#secret").show();
+                $(".row.pb-3").html(products);
+                $(".mb-5.mt-2").text("Search Result");
+                }
+                }
+            })
+            }
+            })
 
         
 
