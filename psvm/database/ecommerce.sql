@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2022 at 08:08 AM
+-- Generation Time: Aug 03, 2022 at 04:41 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -143,7 +143,9 @@ CREATE TABLE `user_info` (
 INSERT INTO `user_info` (`id`, `name`, `email`, `phone`, `password`) VALUES
 (3, 'Subha Man Shrestha', 'subha@gmail.com', 987654321, 'iLoveDota123'),
 (4, 'Aditya Das Tuladhar', 'aditya.tuladhar@gmail.com', 417591434, 'asdf12345'),
-(7, 'Yashu Sthapit', 'yashu@gmail.com', 2147483647, 'padandas69');
+(7, 'Yashu Sthapit', 'yashu@gmail.com', 21474836, 'padandas69'),
+(11, 'Rashik Ratna Tuladhar', 'rashikratna@gmail.com', 8291846, 'R@ksikhayo12'),
+(12, 'Admin', 'admin', 1233454, 'admin123');
 
 -- --------------------------------------------------------
 
@@ -252,7 +254,7 @@ ALTER TABLE `product_categories`
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `vendor_info`
