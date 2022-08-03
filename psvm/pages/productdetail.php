@@ -71,8 +71,7 @@ if (isset($_POST['add'])) {
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 
     <style>
         .offer_size img {
@@ -99,7 +98,7 @@ if (isset($_POST['add'])) {
             margin-right: 20px;
         }
     </style>
-    <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lOsKoRQ8DK2g5u70wVpdc6DUVa-6_XBYdEVtOvxjm4B9nyzWL_PwuBzvwumKaVXg3Bru04h4acczZBiMMefDpIHKUtXC9cyvgX8PifU2E2A" charset="UTF-8"></script>
+    <!-- <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lOsKoRQ8DK2g5u70wVpdc6DUVa-6_XBYdEVtOvxjm4B9nyzWL_PwuBzvwumKaVXg3Bru04h4acczZBiMMefDpIHKUtXC9cyvgX8PifU2E2A" charset="UTF-8"></script> -->
 
 </head>
 
@@ -193,7 +192,7 @@ if (isset($_POST['add'])) {
 
         <div class="container-fluid py-5">
 
-            <form action="productdetail.php?id=<?php echo $individual_row['id']?>" method="post">
+            <form action="productdetail.php?id=<?php echo $individual_row['id'] ?>" method="post">
                 <div class="row px-xl-5">
                     <div class="col-lg-5 pb-5">
 
@@ -213,23 +212,23 @@ if (isset($_POST['add'])) {
 
                         <div class="d-flex align-items-center mb-4 pt-2">
 
-                            <button type="submit" name='add' class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
-            
-                            <?php $_SESSION["product_id"] = $individual_row['id']?>
+                            <button type="submit" name='add' class="btn btn-warning px-3 rounded-2"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+
+                            <?php $_SESSION["product_id"] = $individual_row['id'] ?>
                         </div>
                         <div class="d-flex pt-2">
                             <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
-                            <div class="d-inline-flex">
-                                <a class="text-dark px-2" href="">
+                            <div class="d-inline-flex ">
+                                <a class="text-dark px-2 bg-primary rounded-2 m-1" href="">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a class="text-dark px-2" href="">
+                                <a class="text-dark px-2 bg-info rounded-2 m-1" href="">
                                     <i class="fab fa-twitter"></i>
                                 </a>
-                                <a class="text-dark px-2" href="">
+                                <a class="text-dark px-2 bg-info rounded-2 m-1" href="">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a class="text-dark px-2" href="">
+                                <a class="text-dark px-2 bg-danger rounded-2 m-1" href="">
                                     <i class="fab fa-pinterest"></i>
                                 </a>
                             </div>
@@ -244,6 +243,7 @@ if (isset($_POST['add'])) {
         <!-- Footer Start -->
         <?php include '../templates/footer.php' ?>
         <!-- Footer End -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
         <!-- JavaScript Libraries -->

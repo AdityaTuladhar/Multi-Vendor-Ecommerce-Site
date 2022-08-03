@@ -93,9 +93,9 @@ if (isset($_POST['add'])) {
         <div style="height:27px;"></div>
         <div class="row  py-3 px-xl-5 mt-5">
             <div class="col-lg-3 d-none d-lg-block">
-                    <?php
-                        include 'username.php';
-                    ?>
+                <?php
+                include 'username.php';
+                ?>
             </div>
             <div class="col-lg-6 col-6 text-left">
                 <div id="search">
@@ -316,30 +316,7 @@ if (isset($_POST['add'])) {
     <!-- Categories End -->
 
     <!-- Offer Start -->
-    <div class='container-fluid offer pt-5'>
-    <div class='row px-xl-5' style='background-color:rgba(232, 232, 232, 0.3) ;'>
-    <div class='col-md-6 pb-4'>
-    <div class='offer_size position-relative text-center text-md-right text-white mb-2 py-5 px-5'>
-    <img src='../images/offer1.jpg' alt='image'>
-    <!-- <div class='position-relative' style='z-index: 1;'>
-    <h5 class='text-uppercase text-primary mb-3'>20% off the all order</h5>
-    <h1 class='mb-4 font-weight-semi-bold'>Spring Collection</h1>
-    <a href='#' class='btn btn-outline-primary py-md-2 px-md-3'>Shop Now</a>
-    </div> -->
-    </div>
-    </div>
-    <div class='col-md-6 pb-4'>
-    <div class='offer_size position-relative text-center text-md-left text-white mb-2 py-5 px-5'>
-    <img src='../images/offer2.jpg' alt='iamge'>
-    <!-- <div class='position-relative' style='z-index: 1;'>
-    <h5 class='text-uppercase text-primary mb-3'>20% off the all order</h5>
-    <h1 class='mb-4 font-weight-semi-bold'>Winter Collection</h1>
-    <a href='#' class='btn btn-outline-primary py-md-2 px-md-3'>Shop Now</a>
-    </div> -->
-    </div>
-    </div>
-    </div>
-    </div>
+    
     <!-- Offer End -->
 
     <!-- Products Start -->
