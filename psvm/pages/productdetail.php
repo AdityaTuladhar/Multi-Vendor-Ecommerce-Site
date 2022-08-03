@@ -17,10 +17,9 @@ if (isset($_POST['add'])) {
     //echo "<script>alert('" . $_POST['product_id'] . "')</script>";
     /// print_r($_POST['product_id']);
     if (isset($_SESSION['cart'])) {
-
         $item_array_id = array_column($_SESSION['cart'], "product_id");
 
-        if (in_array($_POST['product_id'], $item_array_id)) {
+        if (in_array($_SESSION["product_id"], $item_array_id)) {
             echo "<script>alert('Product is already added in the cart..!')</script>";
 
             echo "<scr  ipt>window.location = 'market.php'</scr>";
@@ -28,15 +27,14 @@ if (isset($_POST['add'])) {
 
             $count = count($_SESSION['cart']);
             $item_array = array(
-                'product_id' => $_POST['product_id']
+                'product_id' => $_SESSION["product_id"]
             );
 
             $_SESSION['cart'][$count] = $item_array;
         }
     } else {
-
         $item_array = array(
-            'product_id' => $_POST['product_id']
+            'product_id' => $_SESSION["product_id"]
         );
 
         // Create new session variable
@@ -195,7 +193,7 @@ if (isset($_POST['add'])) {
 
         <div class="container-fluid py-5">
 
-            <form action="productdetail.php" method="post">
+            <form action="productdetail.php?id=<?php echo $individual_row['id']?>" method="post">
                 <div class="row px-xl-5">
                     <div class="col-lg-5 pb-5">
 
@@ -216,7 +214,8 @@ if (isset($_POST['add'])) {
                         <div class="d-flex align-items-center mb-4 pt-2">
 
                             <button type="submit" name='add' class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
-                            <input type='hidden' name='product_id' value='<?php echo $individual_row['id'] ?>'>
+            
+                            <?php $_SESSION["product_id"] = $individual_row['id']?>
                         </div>
                         <div class="d-flex pt-2">
                             <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
