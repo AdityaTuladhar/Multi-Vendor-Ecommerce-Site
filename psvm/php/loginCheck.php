@@ -1,0 +1,26 @@
+<?php 
+session_start();
+include('../config.php');
+$username=$_POST['username'];
+$password=$_POST['password'];
+$q="select name,password from users_tbl where name='$username' and password='$password'";
+if($username==''||$password=='')
+{
+	header("location:../dashboard/pages/login.php");
+}
+else
+{	
+	$r=mysqli_query($con,$q);
+	$row=mysqli_fetch_assoc($r);
+	if(!is_null($row))
+	{
+		$_SESSION['username']=$username;
+		$_SESSION['password']=$password;
+		header("location:../dashboard/index.php");
+	}
+	else
+	{
+		header("location:../dashboard/pages/login.php");
+	}
+}
+?>

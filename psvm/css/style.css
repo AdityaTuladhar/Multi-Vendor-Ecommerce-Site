@@ -1,0 +1,131 @@
+/* *** Fonts *** */
+@font-face {
+	font-family: 'bold';
+	src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+	font-family: 'light';
+	src: url(../fonts/Poppins-Light.ttf);
+}
+@font-face {
+	font-family: 'medium';
+	src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+	font-family: 'regular';
+	src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+	font-family: 'semibold';
+	src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+	font-family: 'thin';
+	src: url(../fonts/Poppins-Thin.ttf);
+}
+/* End of fonts */
+
+/*  *** CSS *** */
+/* Most frequently used in almost all pages */
+html {
+	scroll-behavior: smooth;
+}
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "medium";
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+/* .mini-container {
+	width: 100%;
+	margin: 0 auto;
+} */
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* *** Buttons Styles*** */
+.btn {
+	padding: 5px 10px;
+
+	font: 14px 'medium';
+	text-transform: uppercase;
+	cursor: pointer;
+	border-radius: 4px;
+	border: none;
+}
+.btn-default {
+	background-color: #0d6efd;
+	color: #fff;
+}
+.btn-large {
+	padding: 15px 40px;
+}
+
+.btn-default:hover {
+	background-color: #046e64;
+}
+/* ***End of Buttons */
+
+/* text */
+.title {
+	max-width: 50%;
+	font-family: 'semibold';
+	font-size: 30px;
+	text-align: center;
+}
+.text {
+	font-family: 'regular';
+	color: #000;
+	padding: 10px;
+	text-align: justify;
+}
+
+/* tab-content */
+/* Used in CV, Blog and Research page  */
+.tab button {
+	outline: none;
+	border: none;
+	padding: 10px 20px;
+	background-color: #009866;
+	color: #fff;
+	border-radius: 10px;
+}
+.tab button:hover {
+	background-color: #164635;
+}
+.tab button.active {
+	background-color: #164635;
+}
+.tabcontent {
+	text-align: center;
+
+	border: 1px solid #333;
+	border-radius: 5px;
+	display: none;
+	padding: 6px 12px;
+	margin-top: 60px;
+	margin-bottom: 130px;
+}
+.button {
+	margin-top: 10px;
+	text-align: center;
+}
+.tab {
+	text-align: center;
+}
